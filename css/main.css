@@ -1,0 +1,335 @@
+:root {}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
++:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+/* Variables Globales */
+.contenedor {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fuentePrincipal);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 3.8rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Utilidades */
+.no--margin {
+    margin: 0;
+}
+
+.no--padding {
+    padding: 0;
+}
+
+.centrar--texto {
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 40rem;
+}
+
+@media (min-width: 768px) {
+    .header {
+        z-index: 100;
+        width: 100%;
+    }
+}
+
+.informacion {
+    background-color: royalblue;
+}
+
+.contacto {
+    padding: 1.5rem;
+}
+
+.informacion__telefono,
+.informacion__correo {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-left: .5rem;
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        padding: 1rem 3rem;
+    }
+
+    .informacion__telefono,
+    .informacion__correo {
+        /* color: #fff; */
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0 2rem;
+    }
+}
+
+/* Navegacion */
+.logotipo {
+    display: flex;
+    justify-content: center;
+}
+
+.logotipo__titulo {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.logotipo__imagen {
+    width: 5rem;
+    height: 5rem;
+    filter: brightness(1);
+    mix-blend-mode: multiply
+}
+
+@media (min-width: 768px) {
+    .logotipo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navegacion {
+    background-color: #fff;
+    border-bottom: 1px solid royalblue;
+}
+.navegacion__enlaces {
+    display:none;
+}
+.navegacion__enlace {
+    display: block;
+    color: royalblue;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.navegacion__enlace:hover {
+    color: #fff;
+    background-color: royalblue;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        padding: 1rem 3rem;
+        border-bottom: 1px solid royalblue;
+    }
+    .navegacion__enlaces {
+        display: block;
+    }
+    .navegacion__enlace {
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+}
+
+/* MAIN*/
+.main {
+    padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-top: 11rem;
+    }
+}
+
+.contenido-principal {
+    background-image: url('../images/fondo-principal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 52%;
+    height: 60rem;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        background-position: center -100px;
+    }
+}
+
+.informacion-horario {
+    background-color: royalblue;
+    clip-path: polygon(100% 29%, 100% 100%, 0 100%, 0 31%, 49% 57%);
+    margin: -33rem auto 0 auto;
+    padding: 25rem 0 .5rem 0;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .informacion-horario {
+        padding: 21rem 0 .5rem 0;
+    }
+}
+
+.horario {}
+
+.horario__titulo {
+    font-size: 3rem;
+}
+
+.horario__texto {
+    font-size: 2.8rem;
+}
+
+.horario__texto--bold {
+    font-size: 2.8rem;
+}
+
+@media (min-width: 768px) {
+    .horario__titulo {
+        font-size: 5rem;
+    }
+
+    .horario__texto {
+        font-size: 2rem;
+    }
+
+    .horario__texto--bold {
+        font-size: 2.5rem;
+    }
+}
+
+/* SERVICIOS */
+.servicios__titulo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.bloques {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+.bloque {
+    border: 1px solid gray;
+    border-top: none;
+}
+
+.bloque__titulo {
+    color: #fff;
+    background-color: grey;
+    padding: 2rem 4rem;
+    font-size: 2.5rem;
+}
+@media (min-width: 768px){
+    .bloque__titulo {
+        font-size: 3rem;
+    }
+}
+.bloque__precio {
+    text-align: center;
+    padding: 5rem;
+}
+
+.bloque__descripcion {
+    text-align: center;
+}
+
+.bloque__listas {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: 0;
+}
+
+.bloque__lista {
+    display: flex;
+    padding: 2rem 0;
+}
+
+svg {
+    padding: 0 1rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.footer .navegacion {
+    background-color: royalblue;
+    padding: 2rem auto;
+}
+
+.footer .navegacion,
+.footer .navegacion__enlace {
+    color: #fff;
+}
+
+.footer .logotipo__titulo {
+    font-size: 2rem;
+}
